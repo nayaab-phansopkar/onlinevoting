@@ -231,7 +231,7 @@
             try{
                 $prepare->execute($param);
                 $data = $prepare->fetchAll(PDO::FETCH_ASSOC);
-                if($data > 0){
+                if($data){
                     echo json_encode(['user_has_voted'=>true]);
                     exit();
                 }
